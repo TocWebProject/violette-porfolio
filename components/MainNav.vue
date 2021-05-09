@@ -267,8 +267,9 @@ header {
             .logo {
                 .svg-container {
                     svg {
-                    width: 24px;
-                    height: 24px; 
+                        width: 24px;
+                        height: 24px;
+                        margin-bottom: 2px; 
                     }
                 }
 
