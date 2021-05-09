@@ -26,6 +26,22 @@ export default {
     '~/assets/css/main.scss'
   ],
 
+  googleFonts: {
+
+    families: {
+      Roboto: true,
+      'Josefin+Sans': true,
+      Lato: [100, 300],
+      Raleway: {
+        wght: [100, 400],
+        ital: [100]
+      },
+    },
+
+    display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
+    
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
@@ -35,7 +51,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    ['nuxt-gsap-module']
+    ['nuxt-gsap-module'],
+    '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

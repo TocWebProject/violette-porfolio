@@ -32,4 +32,7 @@ html {
   margin: 0;
 }
 
+body {
+  font-family: Raleway;
+}
 </style>
