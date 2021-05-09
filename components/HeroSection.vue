@@ -30,7 +30,7 @@ export default {
             },0.1)
 
             heroLogoAnim.from(".bar-blue", {
-                y: '-500%',
+                y: '-300%',
                 duration: 1.7,
             },0.6)
 
