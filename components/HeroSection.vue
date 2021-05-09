@@ -91,7 +91,7 @@ export default {
             .bar-blue {
                 background-color: #07019B;
                 width: 300px;
-                height: 700px;
+                height: 650px;
                 -webkit-clip-path: inset(0 30% 0 30%);
                 clip-path: inset(0 30% 0 30%);
             }
