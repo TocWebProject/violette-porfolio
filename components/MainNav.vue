@@ -267,13 +267,13 @@ header {
             .logo {
                 .svg-container {
                     svg {
-                    width: 23px;
-                    height: 23px; 
+                    width: 24px;
+                    height: 24px; 
                     }
                 }
 
                 p {
-                    margin-left: 7px;
+                    margin-left: 8px;
                     font-size: 28px;
                     font-weight: 600;
                 }
