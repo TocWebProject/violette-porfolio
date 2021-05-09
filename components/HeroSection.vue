@@ -37,7 +37,7 @@ export default {
             heroLogoAnim.from(".circle-yellow", {
                 x: '600%',
                 duration: 1.7,
-            },1.6)
+            },1.2)
         }
     },
     mounted(){

@@ -263,6 +263,21 @@ header {
         .header-container {
             padding: 0px 20px;
             height: 60px;
+
+            .logo {
+                .svg-container {
+                    svg {
+                    width: 23px;
+                    height: 23px; 
+                    }
+                }
+
+                p {
+                    margin-left: 7px;
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+            }
         }
 
         .menu-overlay {
