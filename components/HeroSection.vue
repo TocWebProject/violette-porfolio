@@ -48,16 +48,18 @@ export default {
 
 <style lang="scss">
 .hero-section {
-    // background-color:beige;
+    overflow: hidden !important;
+    
     .section-container {
         height: 100vh;
         margin: 0 auto;
         max-width: 1400px;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    
+        
         h1{
             text-align: center;
             font-size: 90px;
