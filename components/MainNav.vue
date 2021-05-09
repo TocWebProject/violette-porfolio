@@ -138,11 +138,12 @@ header {
     .header-container {
         margin: 0 auto;
         max-width: 1400px;
+        width: 100%;
+        height: 90px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0px 40px;
-        height: 90px;
 
         .logo {
             z-index: 150;
