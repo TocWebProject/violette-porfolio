@@ -82,21 +82,21 @@ export default {
             }
 
             .circle-red {
-                background-color: red;
+                background-color: #be1e2d;
                 width: 150px;
                 height: 150px;
                 -webkit-clip-path: circle(50% at 50% 50%);
                 clip-path: circle(50% at 50% 50%); 
             }
             .bar-blue {
-                background-color: #07019B;
+                background-color: #21409a;
                 width: 300px;
                 height: 650px;
                 -webkit-clip-path: inset(0 30% 0 30%);
                 clip-path: inset(0 30% 0 30%);
             }
             .circle-yellow {
-                background-color: yellow;
+                background-color: #ffde17;
                 width: 150px;
                 height: 150px;
                 -webkit-clip-path: circle(50% at 50% 50%);
