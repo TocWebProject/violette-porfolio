@@ -12,44 +12,60 @@
                     <div class="circle-yellow"></div>
                 </div>   
             </div>
+            <div class="arrow-container">
+                <div class="arrow-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="arrow-svg h-6 w-6" fill="#000000" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </div>
+            </div>
         </div>
     </section>
 </template>
 
 <script>
+import { Linear } from "gsap";
 export default {
     name:'HeroSection',
     methods: {
-        heroLogoAnim(){
+        heroAnim(){
             const gsap = this.$gsap
-            const heroLogoAnim = new gsap.timeline()
+            const heroAnim = new gsap.timeline()
             
-            heroLogoAnim.from(".circle-red", {
+            heroAnim.from(".circle-red", {
                 x: '-600%',
                 duration: 1.7,
             },0.1)
 
-            heroLogoAnim.from(".bar-blue", {
+            heroAnim.from(".bar-blue", {
                 y: '-300%',
                 duration: 1.7,
             },0.6)
 
-            heroLogoAnim.from(".circle-yellow", {
+            heroAnim.from(".circle-yellow", {
                 x: '600%',
                 duration: 1.7,
             },1.2)
-        }
+
+            heroAnim.from(".arrow-container", {
+                opacity: 0,
+                duration: 1,
+            },3.7)
+
+        },
+
     },
+
     mounted(){
-        this.heroLogoAnim();
+        this.heroAnim();
     }
 }
 </script>
 
 <style lang="scss">
 .hero-section {
-    overflow: hidden !important;
-    
+    overflow: hidden;
+
     .section-container {
         height: 100vh;
         margin: 0 auto;
@@ -60,15 +76,14 @@ export default {
         align-items: center;
         flex-direction: column;
         
+        
         h1{
             text-align: center;
             font-size: 90px;
             color: black;
-
         }
-
+ 
         .hero-logo {
-            // background-color: burlywood;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -88,6 +103,7 @@ export default {
                 -webkit-clip-path: circle(50% at 50% 50%);
                 clip-path: circle(50% at 50% 50%); 
             }
+
             .bar-blue {
                 background-color: #21409a;
                 width: 300px;
@@ -95,6 +111,7 @@ export default {
                 -webkit-clip-path: inset(0 30% 0 30%);
                 clip-path: inset(0 30% 0 30%);
             }
+
             .circle-yellow {
                 background-color: #ffde17;
                 width: 150px;
@@ -103,7 +120,21 @@ export default {
                 clip-path: circle(50% at 50% 50%); 
             }
         }
-    }
+
+        .arrow-container {
+            position: absolute;
+            bottom: 25px;
+            left: 40px;
+            z-index: -1;
+
+            .arrow-down {   
+                width: 33px;
+                height: 33px;
+            }
+        }
+
+    } 
+
 }
 
 // // Extra small devices (portrait phones, tablet less than 1024px)
@@ -116,9 +147,13 @@ export default {
     }
 }
 
-@media screen and (min-width: 100px) and (max-width: 660px) { 
+@media screen and (min-width: 100px) and (max-width: 600px) { 
     .hero-section {
         .section-container  {
+            .arrow-container {
+                bottom: 10px;
+                left: 18px;
+            }
 
             .hero-logo {
                 .circle-red {
@@ -136,5 +171,16 @@ export default {
             }
         }
     }
+}
+
+@media screen and (min-width: 1600px) { 
+.hero-section {
+        .section-container  {
+            .arrow-container {
+          
+                left: 15%;
+            }
+        }
+    } 
 }
 </style>
