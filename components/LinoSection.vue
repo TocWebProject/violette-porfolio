@@ -14,8 +14,7 @@ export default {
 
 <style lang="scss">
 .lino-section {
-    background-color: royalblue;
-
+  
     .section-container {
         height: 100vh;
         margin: 0 auto;
@@ -27,7 +26,7 @@ export default {
         h1{
             text-align: center;
             font-size: 90px;
-            color:white;
+            color:#21409a;
         }
     }
 }

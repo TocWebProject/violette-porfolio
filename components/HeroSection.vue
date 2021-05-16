@@ -1,15 +1,21 @@
 <template>
     <section id="home" class="hero-section">
-        <div class="section-container">
+        <div class="section-container" >
             <div class="hero-logo">
-                <div class="polygon-container">
-                     <div class="circle-red"></div>
+                <div class="polygon-container-red">
+                     <div class="circle-red" @mouseover="hoverCircleRed()" @mouseleave="reverseHoverCircleRed()">
+                         <img class="img-circle-red" src="~/assets/img/test-vio-3.png"  alt="">
+                     </div>
                 </div>
-                <div class="polygon-container">
-                   <div class="bar-blue"></div> 
+                <div class="polygon-container-blue">
+                    <div class="bar-blue" @mouseover="hoverBarBlue()" @mouseleave="reverseHoverBarBlue()">
+                        <img class="img-bar-blue" src="~/assets/img/test-vio.png" alt="">
+                    </div> 
                 </div>
-                <div class="polygon-container">
-                    <div class="circle-yellow"></div>
+                <div class="polygon-container-yellow">
+                    <div class="circle-yellow" @mouseover="hoverCircleYellow()" @mouseleave="reverseHoverCircleYellow()">
+                        <img class="img-circle-yellow" src="~/assets/img/test-vio-2.png" alt="">
+                    </div>
                 </div>   
             </div>
             <div class="arrow-container">
@@ -25,6 +31,7 @@
 
 <script>
 import { Linear } from "gsap";
+
 export default {
     name:'HeroSection',
     methods: {
@@ -54,70 +61,257 @@ export default {
 
         },
 
+        animateOnScroll() {
+            const gsap = this.$gsap
+
+            gsap.to(".arrow-down", {
+                scrollTrigger: {
+                    trigger: '.arrow-down',
+                    start: 'top 85%',
+                    toggleClass: 'active',
+                    toggleActions: "restart resume reverse reverse",
+                    scrub: true, 
+                },
+                opacity: 0,
+                duration: 0.5,
+            })
+
+            // gsap.to(".circle-red", {
+            //     scrollTrigger: {
+            //         trigger: '.hero-section',
+            //         start: 'top top',
+            //         toggleClass: 'active',
+            //         toggleActions: "restart resume reverse reverse",
+            //         scrub: true,
+            //     },
+            //     opacity: 0,
+            // })
+
+            // gsap.to(".bar-blue", {
+            //     scrollTrigger: {
+            //         trigger: '.hero-section',
+            //         start: 'top top',
+            //         toggleClass: 'active',
+            //         toggleActions: "restart resume reverse reverse",
+            //         scrub: true,
+            //     },
+            //     opacity: 0,
+            // })
+
+            // gsap.to(".circle-yellow", {
+            //     scrollTrigger: {
+            //         trigger: '.hero-section',
+            //         start: 'top top',
+            //         toggleClass: 'active',
+            //         toggleActions: "restart resume reverse reverse",
+            //         scrub: true,
+                  
+            //     },
+            //      opacity: 0,
+            // })
+
+        },
+        hoverCircleYellow() {
+            const gsap = this.$gsap 
+            const ExpoScaleEase = this.$ExpoScaleEase
+
+            gsap.to(".img-circle-yellow", {
+                opacity: 1,
+                scale: 1.1,
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+
+            gsap.to(".circle-yellow", {
+                scale: 1.2,
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+        },
+
+        reverseHoverCircleYellow() {
+            const gsap = this.$gsap 
+            const ExpoScaleEase = this.$ExpoScaleEase
+
+            gsap.to(".img-circle-yellow", {
+               opacity: 0, 
+               scale: 1,
+               ease: ExpoScaleEase,
+               duration: 0.4,
+            })
+
+            gsap.to(".circle-yellow", {
+                scale: 1,
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+        },
+        
+        hoverBarBlue() {
+            const gsap = this.$gsap 
+            const ExpoScaleEase = this.$ExpoScaleEase
+
+            gsap.to(".img-bar-blue", {
+                opacity: 1,
+                scale: 1.1,
+                y: '-15px',
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+
+            gsap.to(".bar-blue", {
+                scale: 1.1,
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+        },
+
+        reverseHoverBarBlue() {
+            const gsap = this.$gsap 
+            const ExpoScaleEase = this.$ExpoScaleEase
+
+            gsap.to(".img-bar-blue", {
+               opacity: 0, 
+               scale: 1,
+               y: '0px',
+               ease: ExpoScaleEase,
+               duration: 0.4,
+            })
+
+            gsap.to(".bar-blue", {
+                scale: 1,
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+        },
+
+        hoverCircleRed() {
+            const gsap = this.$gsap 
+            const ExpoScaleEase = this.$ExpoScaleEase
+
+            gsap.to(".img-circle-red", {
+                opacity: 1,
+                scale: 1.1,
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+
+            gsap.to(".circle-red", {
+                scale: 1.2,
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+        },
+
+        reverseHoverCircleRed() {
+            const gsap = this.$gsap 
+            const ExpoScaleEase = this.$ExpoScaleEase
+
+            gsap.to(".img-circle-red", {
+               opacity: 0, 
+               scale: 1,
+               ease: ExpoScaleEase,
+               duration: 0.4,
+            })
+
+            gsap.to(".circle-red", {
+                scale: 1,
+                ease: ExpoScaleEase,
+                duration: 0.4,
+            })
+        },
+
     },
+
 
     mounted(){
         this.heroAnim();
+        this.animateOnScroll();
     }
 }
 </script>
 
 <style lang="scss">
 .hero-section {
-    overflow: hidden;
-
+    overflow: hidden !important;
+    
     .section-container {
-        height: 100vh;
-        margin: 0 auto;
-        max-width: 1400px;
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        
-        
-        h1{
-            text-align: center;
-            font-size: 90px;
-            color: black;
-        }
- 
+        height: 100vh;
+        margin: 0 auto;
+        max-width: 1400px;
+        width: 100%; 
+
         .hero-logo {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: -1;
-            
-            .polygone-container {
+ 
+            .polygone-container-red, .polygone-container-blue, .polygone-container-yellow {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                overflow: hidden;
             }
 
             .circle-red {
-                background-color: #be1e2d;
-                width: 150px;
-                height: 150px;
                 -webkit-clip-path: circle(50% at 50% 50%);
                 clip-path: circle(50% at 50% 50%); 
+                background-color: #be1e2d;
+                width: 152px;
+                height: 152px;
+                overflow: hidden;
+
+                .img-circle-red {
+                    -webkit-clip-path: circle(50% at 50% 50%);
+                    clip-path: circle(50% at 50% 50%); 
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    width: 152px;
+                    height: 152px;
+                }
             }
 
             .bar-blue {
+                -webkit-clip-path: inset(0 30% 0 30%);
+                clip-path: inset(0 30% 0 30%);
                 background-color: #21409a;
                 width: 300px;
                 height: 650px;
-                -webkit-clip-path: inset(0 30% 0 30%);
-                clip-path: inset(0 30% 0 30%);
+                overflow: hidden;
+
+                .img-bar-blue {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
             }
 
             .circle-yellow {
-                background-color: #ffde17;
-                width: 150px;
-                height: 150px;
                 -webkit-clip-path: circle(50% at 50% 50%);
                 clip-path: circle(50% at 50% 50%); 
+                background-color: #ffde17;
+                width: 152px;
+                height: 152px;
+                overflow: hidden;
+
+                .img-circle-yellow {
+                    -webkit-clip-path: circle(50% at 50% 50%);
+                    clip-path: circle(50% at 50% 50%); 
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    width: 152px;
+                    height: 152px;
+                }
             }
         }
 
@@ -125,16 +319,13 @@ export default {
             position: absolute;
             bottom: 25px;
             left: 40px;
-            z-index: -1;
 
             .arrow-down {   
                 width: 33px;
                 height: 33px;
             }
         }
-
     } 
-
 }
 
 // // Extra small devices (portrait phones, tablet less than 1024px)
@@ -157,16 +348,30 @@ export default {
 
             .hero-logo {
                 .circle-red {
-                    width: 75px;
-                    height: 75px;
+                    width: 76px;
+                    height: 76px;
+                    .img-circle-red {
+                        width: 76px;
+                        height: 76px;
+                    }
                 }
                 .bar-blue {
                     width: 150px;
                     height: 350px;
+
+                    .img-bar-blue {
+                    width: 150px;
+                    height: 350px;
+                    }
                 }
                 .circle-yellow {
-                    width: 75px;
-                    height: 75px;
+                    width: 76px;
+                    height: 76px;
+
+                    .img-circle-yellow {
+                        width: 76px;
+                        height: 76px;
+                    }
                 }
             }
         }

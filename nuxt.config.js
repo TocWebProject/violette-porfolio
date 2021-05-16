@@ -26,6 +26,24 @@ export default {
     '~/assets/css/main.scss'
   ],
 
+  gsap: {
+    extraPlugins: {
+      cssRule: false,
+      draggable: false,
+      easel: false,
+      motionPath: false,
+      pixi: false,
+      text: false,
+      scrollTo: false,
+      scrollTrigger: true
+    },
+    extraEases: {
+      expoScaleEase: true,
+      roughEase: false,
+      slowMo: false,
+    }
+  },
+
   googleFonts: {
 
     families: {
