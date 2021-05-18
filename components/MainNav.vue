@@ -309,7 +309,7 @@ header {
         .main-nav {
             nav{
                 a {
-                    font-size: 52px;
+                    font-size: 45px;
                 }
             }
         }
