@@ -70,45 +70,45 @@ export default {
                     start: 'top 85%',
                     toggleClass: 'active',
                     toggleActions: "restart resume reverse reverse",
-                    scrub: true, 
+                    // scrub: true, 
                 },
                 opacity: 0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
-            // gsap.to(".circle-red", {
-            //     scrollTrigger: {
-            //         trigger: '.hero-section',
-            //         start: 'top top',
-            //         toggleClass: 'active',
-            //         toggleActions: "restart resume reverse reverse",
-            //         scrub: true,
-            //     },
-            //     opacity: 0,
-            // })
+            gsap.to(".circle-red", {
+                scrollTrigger: {
+                    trigger: '.hero-section',
+                    start: 'top top',
+                    toggleClass: 'active',
+                    toggleActions: "restart resume reverse reverse",
+                    scrub: true,
+                },
+                opacity: 0,
+            })
 
-            // gsap.to(".bar-blue", {
-            //     scrollTrigger: {
-            //         trigger: '.hero-section',
-            //         start: 'top top',
-            //         toggleClass: 'active',
-            //         toggleActions: "restart resume reverse reverse",
-            //         scrub: true,
-            //     },
-            //     opacity: 0,
-            // })
+            gsap.to(".bar-blue", {
+                scrollTrigger: {
+                    trigger: '.hero-section',
+                    start: 'top top',
+                    toggleClass: 'active',
+                    toggleActions: "restart resume reverse reverse",
+                    scrub: true,
+                },
+                opacity: 0,
+            })
 
-            // gsap.to(".circle-yellow", {
-            //     scrollTrigger: {
-            //         trigger: '.hero-section',
-            //         start: 'top top',
-            //         toggleClass: 'active',
-            //         toggleActions: "restart resume reverse reverse",
-            //         scrub: true,
+            gsap.to(".circle-yellow", {
+                scrollTrigger: {
+                    trigger: '.hero-section',
+                    start: 'top top',
+                    toggleClass: 'active',
+                    toggleActions: "restart resume reverse reverse",
+                    scrub: true,
                   
-            //     },
-            //      opacity: 0,
-            // })
+                },
+                opacity: 0,
+            })
 
         },
         hoverCircleYellow() {
@@ -153,7 +153,7 @@ export default {
 
             gsap.to(".img-bar-blue", {
                 opacity: 1,
-                scale: 1.1,
+                scale: 1.05,
                 y: '-15px',
                 ease: ExpoScaleEase,
                 duration: 0.4,
@@ -242,7 +242,7 @@ export default {
         flex-direction: column;
         height: 100vh;
         margin: 0 auto;
-        max-width: 1400px;
+        max-width: 1600px;
         width: 100%; 
 
         .hero-logo {
@@ -382,8 +382,7 @@ export default {
 .hero-section {
         .section-container  {
             .arrow-container {
-          
-                left: 15%;
+                left: 10%;
             }
         }
     } 

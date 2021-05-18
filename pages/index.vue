@@ -2,6 +2,7 @@
   <main>
     <HeroSection />
     <LinoSection />
+    <PublicationsSection />
     <ContactSection />
   </main> 
 </template>

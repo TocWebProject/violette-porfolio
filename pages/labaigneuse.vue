@@ -1,22 +1,20 @@
 <template>
-    <section id="linogravures" class="lino-section">
+    <section id="baigneuse" class="baigneuse-section">
         <div class="section-container">
-            <h1>Linogravures</h1>
-            <NuxtLink to="/labaigneuse">La baigneuse</NuxtLink>
+            <h1>La baigneuse</h1>
+            <NuxtLink to="/#linogravures">Retour</NuxtLink>
         </div>
     </section>
 </template>
 
 <script>
 export default {
-    name:'LinoSection',
+    name:'labaigneuse',
 }
 </script>
 
 <style lang="scss">
-.lino-section {
-    background-color: #21409a;
-     color: #ffffff;
+.baigneuse-section {
   
     .section-container {
         height: 100vh;
@@ -30,28 +28,24 @@ export default {
         h1{
             text-align: center;
             font-size: 90px;
-            color: #ffffff;
+            color:#21409a;
             margin-bottom: 30px;
         }
 
         a {            
             text-decoration: none;
-            color: white;
+            color: black;
 
             &:link {
-            color: white;
-            }
-
-            &:visited {
-            color:whitesmoke;
+            color: black;
             }
 
             &:hover {
-            color: rgb(164, 185, 250);
+            color: #21409a;
             }
 
             &:active {
-            color: rgb(148, 173, 247);
+            color: #163388;
             }
         }
     }
@@ -60,13 +54,13 @@ export default {
 
 // // Extra small devices (portrait phones, tablet less than 1024px)
 @media screen and (min-width: 100px) and (max-width: 1024px) { 
-    .lino-section {
+    .baigneuse-section {
         .section-container {   
             height: 100vh;
             min-height: 700px;
 
             h1 {
-                font-size: 55px;
+                font-size: 60px;
             }
         }
     }

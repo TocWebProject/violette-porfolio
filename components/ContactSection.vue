@@ -1,7 +1,7 @@
 <template>
     <section id="contact" class="contact-section">
         <div class="section-container">
-            <h1>Violette Violette</h1>
+            <h1>Contact</h1>
         </div>
     </section>
 </template>
@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss">
 .contact-section {
-    background-color:rgb(207, 231, 231);
+    background-color:#be1e2d;
 
     .section-container {
         height: 100vh;
@@ -27,7 +27,7 @@ export default {
         h1{
             text-align: center;
             font-size: 90px;
-            color:darkcyan;
+            color: white;
         }
     }
 }
@@ -39,6 +39,10 @@ export default {
         .section-container {   
             height: 100vh;
             min-height: 700px;
+
+            h1 {
+                font-size: 55px;
+            }
         }
     }
 }
