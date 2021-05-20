@@ -236,6 +236,7 @@ export default {
     overflow: hidden !important;
     
     .section-container {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
