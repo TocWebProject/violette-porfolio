@@ -335,8 +335,8 @@ export default {
     .hero-section {
         .section-container  {
             .arrow-container {
-                bottom: 10px;
                 left: 18px;
+                bottom: 45px;
             }
 
             .hero-logo {
