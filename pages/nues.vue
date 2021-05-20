@@ -1,20 +1,20 @@
 <template>
-    <section class="baigneuse-section">
+    <section class="nues-section">
         <div class="section-container">
-            <h1>La baigneuse</h1>
-            <NuxtLink to="/#baigneuse">Retour</NuxtLink>
+            <h1>Nues</h1>
+            <NuxtLink to="/#nues">Retour</NuxtLink>
         </div>
     </section>
 </template>
 
 <script>
 export default {
-    name:'labaigneuse',
+    name:'nues',
 }
 </script>
 
 <style lang="scss">
-.baigneuse-section {
+.nues-section {
   
     .section-container {
         height: 100vh;
@@ -55,7 +55,7 @@ export default {
 
 // // Extra small devices (portrait phones, tablet less than 1024px)
 @media screen and (min-width: 100px) and (max-width: 1024px) { 
-    .baigneuse-section {
+    .nues-section {
         .section-container {   
             height: 100vh;
             min-height: 700px;
