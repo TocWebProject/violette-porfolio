@@ -26,6 +26,38 @@ export default {
     '~/assets/css/main.scss'
   ],
 
+  // Add global page transition
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    css: false,
+
+    beforeEnter(el) {
+      this.$gsap.set(el, {
+        opacity: 0,
+      })
+    },
+
+    enter(el, done) {
+      this.$gsap.to(el, {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done
+      })
+    },
+
+    leave(el, done) {
+      this.$gsap.to(el, {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done
+      })
+    }
+  },
+
   gsap: {
     extraPlugins: {
       cssRule: false,
