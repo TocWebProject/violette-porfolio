@@ -2,7 +2,7 @@
     <div>   
         <header>
             <div class="header-container">
-                <NuxtLink to="/" class="logo">
+                <NuxtLink to="/" class="logo" @click.native="closeMenuSlide()">
                     <div class="svg-container">
                         <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 49">
                             <defs><style>.cls-1{fill:#1a00a5;}</style></defs>
@@ -98,8 +98,6 @@ export default {
         },
 
         closeMenuSlide(){
-            
-            
             const gsap = this.$gsap
             const closeMenuSlide = new gsap.timeline()
             
@@ -130,8 +128,23 @@ export default {
 
             // Back to overflow Auto 
             document.body.style.overflow = "auto";
+        },
+
+        introAnim() {
+            const gsap = this.$gsap
+
+            gsap.from('.header-container', {
+                opacity: 0,
+                y: '-20px',
+                ease: 'power0.inOut',
+                delay: 2.8,
+            })
         }
-    }
+    },
+
+    mounted() {
+        this.introAnim()
+    },
 
 }
 </script>
