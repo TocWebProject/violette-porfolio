@@ -30,8 +30,6 @@
 </template>
 
 <script>
-import { Linear } from "gsap";
-
 export default {
     name:'HeroSection',
     methods: {
@@ -42,22 +40,25 @@ export default {
             heroAnim.from(".circle-red", {
                 x: '-600%',
                 duration: 1.7,
-            },0.1)
+                ease: 'power1.inOut',
+            },0)
 
             heroAnim.from(".bar-blue", {
                 y: '-300%',
                 duration: 1.7,
+                ease: 'power1.inOut',
             },0.6)
 
             heroAnim.from(".circle-yellow", {
                 x: '600%',
                 duration: 1.7,
+                ease: 'power1.inOut',
             },1.2)
 
             heroAnim.from(".arrow-container", {
                 opacity: 0,
                 duration: 1,
-            },3.7)
+            },3.8)
 
         },
 
@@ -68,47 +69,46 @@ export default {
                 scrollTrigger: {
                     trigger: '.arrow-down',
                     start: 'top 85%',
-                    toggleClass: 'active',
                     toggleActions: "restart resume reverse reverse",
-                    // scrub: true, 
+                    scrub: true, 
                 },
                 opacity: 0,
                 duration: 0.3,
             })
 
-            gsap.to(".circle-red", {
-                scrollTrigger: {
-                    trigger: '.hero-section',
-                    start: 'top top',
-                    toggleClass: 'active',
-                    toggleActions: "restart resume reverse reverse",
-                    scrub: true,
-                },
-                opacity: 0,
-            })
+            // gsap.to(".circle-red", {
+            //     scrollTrigger: {
+            //         trigger: '.hero-section',
+            //         start: 'top top',
+            //         toggleClass: 'active',
+            //         toggleActions: "restart resume reverse reverse",
+            //         scrub: true,
+            //     },
+            //     opacity: 0,
+            // })
 
-            gsap.to(".bar-blue", {
-                scrollTrigger: {
-                    trigger: '.hero-section',
-                    start: 'top top',
-                    toggleClass: 'active',
-                    toggleActions: "restart resume reverse reverse",
-                    scrub: true,
-                },
-                opacity: 0,
-            })
+            // gsap.to(".bar-blue", {
+            //     scrollTrigger: {
+            //         trigger: '.hero-section',
+            //         start: 'top top',
+            //         toggleClass: 'active',
+            //         toggleActions: "restart resume reverse reverse",
+            //         scrub: true,
+            //     },
+            //     opacity: 0,
+            // })
 
-            gsap.to(".circle-yellow", {
-                scrollTrigger: {
-                    trigger: '.hero-section',
-                    start: 'top top',
-                    toggleClass: 'active',
-                    toggleActions: "restart resume reverse reverse",
-                    scrub: true,
+            // gsap.to(".circle-yellow", {
+            //     scrollTrigger: {
+            //         trigger: '.hero-section',
+            //         start: 'top top',
+            //         toggleClass: 'active',
+            //         toggleActions: "restart resume reverse reverse",
+            //         scrub: true,
                   
-                },
-                opacity: 0,
-            })
+            //     },
+            //     opacity: 0,
+            // })
 
         },
         hoverCircleYellow() {
@@ -117,16 +117,16 @@ export default {
 
             gsap.to(".img-circle-yellow", {
                 opacity: 1,
-                scale: 1.1,
+                scale: 1,
                 ease: ExpoScaleEase,
                 duration: 0.4,
             })
 
-            gsap.to(".circle-yellow", {
-                scale: 1.2,
-                ease: ExpoScaleEase,
-                duration: 0.4,
-            })
+            // gsap.to(".circle-yellow", {
+            //     scale: 1.2,
+            //     ease: ExpoScaleEase,
+            //     duration: 0.4,
+            // })
         },
 
         reverseHoverCircleYellow() {
@@ -135,16 +135,16 @@ export default {
 
             gsap.to(".img-circle-yellow", {
                opacity: 0, 
-               scale: 1,
+               scale: 1.15,
                ease: ExpoScaleEase,
                duration: 0.4,
             })
 
-            gsap.to(".circle-yellow", {
-                scale: 1,
-                ease: ExpoScaleEase,
-                duration: 0.4,
-            })
+            // gsap.to(".circle-yellow", {
+            //     scale: 1,
+            //     ease: ExpoScaleEase,
+            //     duration: 0.4,
+            // })
         },
         
         hoverBarBlue() {
@@ -159,11 +159,11 @@ export default {
                 duration: 0.4,
             })
 
-            gsap.to(".bar-blue", {
-                scale: 1.1,
-                ease: ExpoScaleEase,
-                duration: 0.4,
-            })
+            // gsap.to(".bar-blue", {
+            //     scale: 1.1,
+            //     ease: ExpoScaleEase,
+            //     duration: 0.4,
+            // })
         },
 
         reverseHoverBarBlue() {
@@ -178,11 +178,11 @@ export default {
                duration: 0.4,
             })
 
-            gsap.to(".bar-blue", {
-                scale: 1,
-                ease: ExpoScaleEase,
-                duration: 0.4,
-            })
+            // gsap.to(".bar-blue", {
+            //     scale: 1,
+            //     ease: ExpoScaleEase,
+            //     duration: 0.4,
+            // })
         },
 
         hoverCircleRed() {
@@ -191,16 +191,16 @@ export default {
 
             gsap.to(".img-circle-red", {
                 opacity: 1,
-                scale: 1.1,
+                scale: 1,
                 ease: ExpoScaleEase,
                 duration: 0.4,
             })
 
-            gsap.to(".circle-red", {
-                scale: 1.2,
-                ease: ExpoScaleEase,
-                duration: 0.4,
-            })
+            // gsap.to(".circle-red", {
+            //     scale: 1.2,
+            //     ease: ExpoScaleEase,
+            //     duration: 0.4,
+            // })
         },
 
         reverseHoverCircleRed() {
@@ -209,16 +209,16 @@ export default {
 
             gsap.to(".img-circle-red", {
                opacity: 0, 
-               scale: 1,
+               scale: 1.15,
                ease: ExpoScaleEase,
                duration: 0.4,
             })
 
-            gsap.to(".circle-red", {
-                scale: 1,
-                ease: ExpoScaleEase,
-                duration: 0.4,
-            })
+            // gsap.to(".circle-red", {
+            //     scale: 1,
+            //     ease: ExpoScaleEase,
+            //     duration: 0.4,
+            // })
         },
 
     },
@@ -275,6 +275,7 @@ export default {
                     opacity: 0;
                     width: 152px;
                     height: 152px;
+                    transform: scale(1.15);
                 }
             }
 
@@ -311,6 +312,7 @@ export default {
                     opacity: 0;
                     width: 152px;
                     height: 152px;
+                    transform: scale(1.15);
                 }
             }
         }
@@ -326,16 +328,6 @@ export default {
             }
         }
     } 
-}
-
-// // Extra small devices (portrait phones, tablet less than 1024px)
-@media screen and (min-width: 100px) and (max-width: 1024px) { 
-    .hero-section {
-        .section-container  {
-            height: 100vh;
-            min-height: 700px;
-        }
-    }
 }
 
 @media screen and (min-width: 100px) and (max-width: 600px) { 
