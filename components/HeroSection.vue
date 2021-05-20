@@ -154,7 +154,7 @@ export default {
             gsap.to(".img-bar-blue", {
                 opacity: 1,
                 scale: 1.05,
-                y: '-15px',
+                y: '-9px',
                 ease: ExpoScaleEase,
                 duration: 0.4,
             })
@@ -293,6 +293,8 @@ export default {
                     top: 0;
                     left: 0;
                     opacity: 0;
+                    width: 300px;
+                    height: 785px;
                 }
             }
 
