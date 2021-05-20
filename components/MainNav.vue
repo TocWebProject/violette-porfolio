@@ -135,7 +135,6 @@ export default {
 
             gsap.from('.header-container', {
                 opacity: 0,
-                y: '-20px',
                 ease: 'power0.inOut',
                 delay: 2.8,
             })
