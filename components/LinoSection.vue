@@ -8,12 +8,18 @@
                         <div class="overlay-card-baigneuse"></div>
                         <img  class="img-baigneuse" src="~assets/img/violette-baigneuse-vase.png" width="478" height="597" alt="linogravure noir et bleu" loading="lazy">
                     </NuxtLink>
-                    <NuxtLink class="link-baigneuse" to="/labaigneuse">La baigneuse</NuxtLink>
+                   <div class="baigneuse-text">
+                        <h3>La baigneuse</h3>
+                        <NuxtLink class="link-baigneuse" to="/labaigneuse">voir plus</NuxtLink>
+                   </div>
                 </div>
 
                 <div class="nues-top" id="nues"></div>
                 <div class="nues-container">
-                    <NuxtLink class="link-nues" to="/nues">Nues</NuxtLink>
+                    <div class="nues-text">
+                        <h3>Nues</h3>
+                        <NuxtLink class="link-nues" to="/nues">voir plus</NuxtLink>
+                    </div>
                     <NuxtLink class="link-img-nues" to="/nues">
                         <div class="overlay-card-nues"></div>
                         <img  class="img-nues" src="~assets/img/violette-nues-plantes.png" width="478" height="597" alt="linogravure noir et bleu" loading="lazy">
@@ -64,7 +70,7 @@ export default {
 .lino-section {
     background-color: #21409a;
     color: #ffffff;
-    padding: 60px 0px 60px 0px;
+    padding: 80px 0px 80px 0px;
   
     .section-container {
         margin: 0 auto;
@@ -90,10 +96,20 @@ export default {
             height: auto;
             margin-left: 99px;
             
-
-            .link-baigneuse {
+            .baigneuse-text {
                 margin-left: 80px;
                 transform: translateY(-75px);
+
+                h3 {
+                    font-weight: 400;
+                    font-size: 35px;
+                }
+
+                .link-baigneuse {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    margin-top: 3px;
+                }
             }
 
             .link-img-baigneuse {
@@ -130,14 +146,24 @@ export default {
             align-items: center;
             height: auto;
             margin-right: 99px;
-          
 
-            .link-nues {
+            .nues-text {
                 margin-right: 80px;
                 transform: translateY(-75px);
 
-            }
+                h3 {
+                    font-weight: 400;
+                    font-size: 35px;
+                }
 
+                .link-nues {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    margin-top: 3px;
+                    
+                }
+            }
+          
             .link-img-nues {
                 position: relative;
                 margin: 0px 20px;
@@ -160,9 +186,10 @@ export default {
         }
 
         a {            
-            text-decoration: none;
+            text-decoration: underline 1px;
             color: white;
-            font-size: 25px;
+            font-size: 17px;
+            transition: all 0.3s ease-out;
 
             &:link {
             color: white;
@@ -173,7 +200,7 @@ export default {
             }
 
             &:hover {
-            color: rgb(164, 185, 250);
+            color: rgb(169, 189, 250);
             }
 
             &:active {
@@ -201,9 +228,10 @@ export default {
                 margin-left: 0px;
                 margin-right: 0px;
 
-                .link-baigneuse {
+                .baigneuse-text {
                     margin-left: 0px;
                     transform: translateY(0px);
+                    margin-top: 20px;
                 }
             }
             
@@ -216,9 +244,11 @@ export default {
                 margin-left: 0px;
                 margin-right: 0px;
 
-                .link-nues {
+                .nues-text {
+                    margin-top: 20px;
                     margin-right: 0px;
                     transform: translateY(0px);
+                    order: 2;
                 }
 
                 .link-img-nues {
@@ -226,9 +256,6 @@ export default {
                     transform: translateY(0px);
                 }
 
-                .link-nues {
-                    order: 2;
-                }
             }
         }
     }

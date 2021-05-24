@@ -169,7 +169,7 @@ header {
             justify-content: center;
             align-items: center;
             text-decoration: none;
-
+            
             &:link {
             color: black;
             }
@@ -261,6 +261,7 @@ header {
                 a {     
                     font-size: 55px;         
                     text-decoration: none;
+                    transition: all 0.3s ease-out;
                 
                     &:link {
                     color: black;
