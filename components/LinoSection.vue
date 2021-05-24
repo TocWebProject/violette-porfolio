@@ -37,25 +37,23 @@ export default {
             const gsap = this.$gsap
 
             gsap.to('.overlay-card-baigneuse', {
-                scrollTrigger: {
-                    trigger: '.baigneuse-container',
-                    start: "center bottom",
-                    end: "center 10%",
-                    toggleActions: "restart none none reverse",
-                },
                 ease: 'power0.inOut',
                 height: '0%',
+                scrollTrigger: {
+                    trigger: '.baigneuse-container',
+                    start: "top 65%",
+                    toggleActions: "restart pause play reverse",
+                },
             })
 
             gsap.to('.overlay-card-nues', {
-                scrollTrigger: {
-                    trigger: '.nues-container',
-                    start: "center bottom",
-                    end: "center 10%",
-                    toggleActions: "restart none none reverse",
-                },
                 ease: 'power0.inOut',
                 height: '0%',
+                scrollTrigger: {
+                    trigger: '.nues-container',
+                    start: "top 65%",
+                    toggleActions: "restart pause play reverse",
+                },
             })
         }
     },
