@@ -38,9 +38,9 @@ export default {
 
             gsap.to('.overlay-card-baigneuse', {
                 scrollTrigger: {
-                    trigger: '.overlay-card-baigneuse',
-                    start: 'top 80%',
-                    toggleClass: 'active',
+                    trigger: '.baigneuse-container',
+                    start: "center bottom",
+                    end: "center 10%",
                     toggleActions: "restart none none reverse",
                 },
                 ease: 'power0.inOut',
@@ -49,9 +49,9 @@ export default {
 
             gsap.to('.overlay-card-nues', {
                 scrollTrigger: {
-                    trigger: '.overlay-card-nues',
-                    start: 'top 80%',
-                    toggleClass: 'active',
+                    trigger: '.nues-container',
+                    start: "center bottom",
+                    end: "center 10%",
                     toggleActions: "restart none none reverse",
                 },
                 ease: 'power0.inOut',
