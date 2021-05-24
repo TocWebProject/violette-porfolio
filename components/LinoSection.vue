@@ -41,10 +41,10 @@ export default {
                     trigger: '.overlay-card-baigneuse',
                     start: 'top 80%',
                     toggleClass: 'active',
-                    toggleActions: "play none none reverse",
+                    toggleActions: "restart none none reverse",
                 },
                 ease: 'power0.inOut',
-                height: 0,
+                height: '0%',
             })
 
             gsap.to('.overlay-card-nues', {
@@ -52,10 +52,10 @@ export default {
                     trigger: '.overlay-card-nues',
                     start: 'top 80%',
                     toggleClass: 'active',
-                    toggleActions: "play none none reverse",
+                    toggleActions: "restart none none reverse",
                 },
                 ease: 'power0.inOut',
-                height: 0,
+                height: '0%',
             })
         }
     },
@@ -214,12 +214,14 @@ export default {
 // // Extra small devices (portrait phones, tablet, desktop less than 1220px)
 @media screen and (min-width: 100px) and (max-width: 1220px) { 
     .lino-section {
+        padding: 50px 0px 50px 0px;
+
         .section-container {   
             min-height: 700px;
 
             h1 {
-                font-size: 40px;
-                margin: 30px 0px;
+                font-size: 44px;
+                margin: 30px 0px 10px 0px;
             }
 
             // BAINGEUSE CARD
@@ -239,6 +241,7 @@ export default {
             .nues-top {
                 transform: translateY(0px);
             }
+
             .nues-container { 
                 flex-direction: column;
                 margin-left: 0px;

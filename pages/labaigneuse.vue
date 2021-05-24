@@ -19,7 +19,6 @@
                 </ul>
             </div>
             <div class="picture-04">
-
             </div>
             <NuxtLink class="back-to-index" to="/#baigneuse">Retour</NuxtLink>
         </div>
