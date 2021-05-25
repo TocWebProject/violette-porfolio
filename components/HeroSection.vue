@@ -19,7 +19,7 @@
                 </div>   
             </div>
             <div class="arrow-container">
-                <div class="arrow-down">
+                <div class="arrow-down" @click="scrollToLino()">
                     <svg xmlns="http://www.w3.org/2000/svg" class="arrow-svg h-6 w-6" fill="#000000" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
@@ -60,6 +60,11 @@ export default {
                 duration: 1,
             },3.8)
 
+        },
+
+        scrollToLino() {
+            const gsap = this.$gsap
+            gsap.to(window, {scrollTo: {y:"#linogravures"}});
         },
 
         animateOnScroll() {
@@ -323,11 +328,12 @@ export default {
         .arrow-container {
             position: absolute;
             bottom: 25px;
-            left: 40px;
+            right: 40px;
 
             .arrow-down {   
                 width: 33px;
                 height: 33px;
+                cursor: pointer;
             }
         }
     } 
@@ -337,7 +343,7 @@ export default {
     .hero-section {
         .section-container  {
             .arrow-container {
-                left: 18px;
+                right: 18px;
                 bottom: 60px;
             }
 
@@ -377,7 +383,7 @@ export default {
 .hero-section {
         .section-container  {
             .arrow-container {
-                left: 10%;
+                right: 10%;
             }
         }
     } 

@@ -68,7 +68,7 @@ export default {
 .lino-section {
     background-color: #21409a;
     color: #ffffff;
-    padding: 80px 0px 80px 0px;
+    padding: 40px 0px 80px 0px;
   
     .section-container {
         margin: 0 auto;
