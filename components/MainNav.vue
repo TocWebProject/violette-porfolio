@@ -31,10 +31,10 @@
             <div class="main-nav">
                 <nav>
                     <ul>
-                        <li><NuxtLink to="/#home" @click.native="toggleMenu()">Accueil</NuxtLink></li>
-                        <li><NuxtLink to="/#linogravures" @click.native="toggleMenu()" >Linogravures</NuxtLink></li>
-                        <li><NuxtLink to="/#publications" @click.native="toggleMenu()" >Publications</NuxtLink></li>
-                        <li><NuxtLink to="/#contact" @click.native="toggleMenu()">Contact</NuxtLink></li>
+                        <li><NuxtLink class="link-home" to="/#home" @click.native="toggleMenu()">Accueil</NuxtLink></li>
+                        <li><NuxtLink class="link-lino" to="/#linogravures" @click.native="toggleMenu()" >Linogravures</NuxtLink></li>
+                        <li><NuxtLink class="link-publication" to="/#publications" @click.native="toggleMenu()" >Publications</NuxtLink></li>
+                        <li><NuxtLink class="link-contact" to="/#contact" @click.native="toggleMenu()">Contact</NuxtLink></li>
                     </ul>     
                 </nav>       
                 <div class="social-share">
@@ -264,21 +264,52 @@ header {
                     transition: all 0.3s ease-out;
                 
                     &:link {
-                    color: black;
+                        color: black;
                     }
 
                     &:visited {
-                    color:rgb(34, 31, 31);
+                        color:rgb(34, 31, 31);
                     }
 
                     &:hover {
-                    color: royalblue;
+                        color: rgb(70, 77, 99);
                     }
 
                     &:active {
-                    color: rgb(31, 79, 223);
+                        color: rgb(50, 53, 73);
                     }
                 }
+
+                a.link-lino {
+                    &:hover {
+                        color: royalblue;
+                    }
+
+                    &:active {
+                        color: rgb(31, 79, 223);
+                    }
+                }
+
+                a.link-contact {
+                    &:hover {
+                    color: #be1e2d;
+                    }
+
+                    &:active {
+                    color: rgb(223, 31, 31);
+                    }
+                }
+
+                a.link-publication {
+                    &:hover {
+                    color: #ffde17;
+                    }
+
+                    &:active {
+                    color: #fad501;
+                    }
+                }
+
             }
         }
 
