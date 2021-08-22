@@ -272,7 +272,7 @@ header {
                     }
 
                     &:hover {
-                        color: rgb(70, 77, 99);
+                        color: rgb(68, 81, 124);
                     }
 
                     &:active {
