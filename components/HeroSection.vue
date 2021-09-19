@@ -2,7 +2,7 @@
     <section id="home" class="hero-section">
         <div class="section-container" >
             <div class="hero-logo">
-                <div class="polygon-container-red">
+                <div class="polygon-container-red" >
                      <div class="circle-red" @mouseover="hoverCircleRed()" @mouseleave="reverseHoverCircleRed()">
                          <img class="img-circle-red" src="~/assets/img/test-vio-3.png"  alt="">
                      </div>
@@ -250,6 +250,7 @@ export default {
         margin: 0 auto;
         max-width: 1600px;
         width: 100%; 
+        margin-bottom: 100px;
 
         .hero-logo {
             width: 100%;

@@ -80,7 +80,7 @@ export default {
             },"-=0.3")
 
             openMenuSlide.to(".burger-svg", {
-                transform: 'scaleX(0.5)',
+                transform: 'scaleX(0.4)',
             },"-=0.7")
 
             openMenuSlide.to(".burger-first-line", {
@@ -215,8 +215,8 @@ header {
             cursor: pointer;
 
             .burger-svg {
-                width: 60px;
-                height: 60px;
+                width: 55px;
+                height: 55px;
             }
         }
     }
