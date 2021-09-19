@@ -104,7 +104,7 @@ export default {
                 scrollTrigger: {
                     trigger: '.baigneuse-container',
                     start: "top 60%",
-                    toggleActions: "restart pause play reverse",
+                    toggleActions: "restart complete none reverse",
                 },
             })
 
@@ -114,7 +114,7 @@ export default {
                 scrollTrigger: {
                     trigger: '.nues-container',
                     start: "top 60%",
-                    toggleActions: "restart pause play reverse",
+                    toggleActions: "restart complete none reverse",
                 },
             })
 
@@ -124,7 +124,7 @@ export default {
                 scrollTrigger: {
                     trigger: '.cormoran-container',
                     start: "top 70%",
-                    toggleActions: "restart pause play reverse",
+                    toggleActions: "restart complete none reverse",
                 },
             })
 
@@ -134,7 +134,7 @@ export default {
                 scrollTrigger: {
                     trigger: '.songeuse-container',
                     start: "top 90%",
-                    toggleActions: "restart pause play reverse",
+                    toggleActions: "restart complete none reverse"
                 },
             })
         },
