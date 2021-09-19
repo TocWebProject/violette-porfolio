@@ -98,7 +98,7 @@ export default {
         animateImgOnScroll() {
             const gsap = this.$gsap
 
-            gsap.to('.overlay-card-baigneuse', {
+            this.overlayBaigneuse = gsap.to('.overlay-card-baigneuse', {
                 ease: 'power0.inOut',
                 height: '0%',
                 scrollTrigger: {
@@ -108,7 +108,7 @@ export default {
                 },
             })
 
-            gsap.to('.overlay-card-nues', {
+            this.overlayNues = gsap.to('.overlay-card-nues', {
                 ease: 'power0.inOut',
                 height: '0%',
                 scrollTrigger: {
@@ -118,7 +118,7 @@ export default {
                 },
             })
 
-            gsap.to('.overlay-card-cormoran', {
+            this.overlayCormoran = gsap.to('.overlay-card-cormoran', {
                 ease: 'power0.inOut',
                 height: '0%',
                 scrollTrigger: {
@@ -128,7 +128,7 @@ export default {
                 },
             })
 
-              gsap.to('.overlay-card-songeuse', {
+            this.overlaySongeuse = gsap.to('.overlay-card-songeuse', {
                 ease: 'power0.inOut',
                 height: '0%',
                 scrollTrigger: {
@@ -241,8 +241,13 @@ export default {
     },
 
     mounted(){
+        this.$ScrollTrigger.refresh();
         this.animateImgOnScroll();
-        this.animateTitleOnScroll();
+        this.animateTitleOnScroll()
+    },
+
+    beforeDestroy(){
+        this.$ScrollTrigger.defaults();
     }
 }
 </script>
