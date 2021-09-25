@@ -1,10 +1,10 @@
 <template>
-  <main>
+  <div>
     <HeroSection />
     <LinoSection />
     <PublicationsSection />
     <ContactSection />
-  </main> 
+  </div> 
 </template>
 
 <script>

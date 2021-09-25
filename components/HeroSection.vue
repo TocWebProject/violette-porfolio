@@ -69,7 +69,7 @@ export default {
 
         animateOnScroll() {
             const gsap = this.$gsap
-
+            
             gsap.to(".arrow-down", {
                 scrollTrigger: {
                     trigger: '.arrow-down',
@@ -81,39 +81,43 @@ export default {
                 duration: 0.3,
             })
 
-            // gsap.to(".circle-red", {
-            //     scrollTrigger: {
-            //         trigger: '.hero-section',
-            //         start: 'top top',
-            //         toggleClass: 'active',
-            //         toggleActions: "restart resume reverse reverse",
-            //         scrub: true,
-            //     },
-            //     opacity: 0,
-            // })
+            gsap.to(".circle-red", {
+                scrollTrigger: {
+                    trigger: '.hero-section',
+                    start: 'top top',
+                    toggleClass: 'active',
+                    toggleActions: "restart resume reverse reverse",
+                    scrub: true,
+                },
+                yPercent: 270,
+                xPercent: -230
+            })
 
-            // gsap.to(".bar-blue", {
-            //     scrollTrigger: {
-            //         trigger: '.hero-section',
-            //         start: 'top top',
-            //         toggleClass: 'active',
-            //         toggleActions: "restart resume reverse reverse",
-            //         scrub: true,
-            //     },
-            //     opacity: 0,
-            // })
+            gsap.to(".bar-blue", {
+                scrollTrigger: {
+                    trigger: '.hero-section',
+                    start: 'top top',
+                    toggleClass: 'active',
+                    toggleActions: "restart resume reverse reverse",
+                    scrub: true,
+                },
+                yPercent: -35,
+                xPercent: -100,
+                rotation: -45, transformOrigin:"center center"
+            })
 
-            // gsap.to(".circle-yellow", {
-            //     scrollTrigger: {
-            //         trigger: '.hero-section',
-            //         start: 'top top',
-            //         toggleClass: 'active',
-            //         toggleActions: "restart resume reverse reverse",
-            //         scrub: true,
+            gsap.to(".circle-yellow", {
+                scrollTrigger: {
+                    trigger: '.hero-section',
+                    start: 'top top',
+                    toggleClass: 'active',
+                    toggleActions: "restart resume reverse reverse",
+                    scrub: true,
                   
-            //     },
-            //     opacity: 0,
-            // })
+                },
+                yPercent: -100,
+                xPercent: 200
+            })
 
         },
         hoverCircleYellow() {
@@ -225,11 +229,11 @@ export default {
             //     duration: 0.4,
             // })
         },
-
     },
 
 
     mounted(){
+        this.$ScrollTrigger.refresh();
         this.heroAnim();
         this.animateOnScroll();
     }
@@ -269,8 +273,8 @@ export default {
                 -webkit-clip-path: circle(50% at 50% 50%);
                 clip-path: circle(50% at 50% 50%); 
                 background-color: #be1e2d;
-                width: 152px;
-                height: 152px;
+                width: 160px;
+                height: 160px;
                 overflow: hidden;
 
                 .img-circle-red {
@@ -280,8 +284,8 @@ export default {
                     top: 0;
                     left: 0;
                     opacity: 0;
-                    width: 152px;
-                    height: 152px;
+                    width: 160px;
+                    height: 160px;
                     transform: scale(1.15);
                 }
             }
@@ -308,8 +312,8 @@ export default {
                 -webkit-clip-path: circle(50% at 50% 50%);
                 clip-path: circle(50% at 50% 50%); 
                 background-color: #ffde17;
-                width: 152px;
-                height: 152px;
+                width: 160px;
+                height: 160px;
                 overflow: hidden;
 
                 .img-circle-yellow {
@@ -319,8 +323,8 @@ export default {
                     top: 0;
                     left: 0;
                     opacity: 0;
-                    width: 152px;
-                    height: 152px;
+                    width: 160px;
+                    height: 160px;
                     transform: scale(1.15);
                 }
             }

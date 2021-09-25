@@ -17,7 +17,6 @@
                             alt="linogravure noir et bleu" 
                             loading="lazy"
                             title="Violette Le Moal - Linogravure nommée La Baigneuse"
-
                         >        
                 </NuxtLink>
                 <div class="baigneuse-text"    
@@ -72,9 +71,9 @@
             <article class="songeuse-container">
                 <div class="songeuse-text">
                     <h3>La songeuse</h3>
-                    <NuxtLink class="link-songeuse" to="/songeuse">voir plus</NuxtLink>
+                    <NuxtLink class="link-songeuse" to="/lasongeuse">voir plus</NuxtLink>
                 </div>
-                <NuxtLink class="link-img-songeuse" to="/songeuse">
+                <NuxtLink class="link-img-songeuse" to="/lasongeuse">
                         <div class="overlay-card-songeuse"></div>
                         <img  
                             class="img-songeuse" 
@@ -239,16 +238,11 @@ export default {
             });
         }
     },
-
     mounted(){
         this.$ScrollTrigger.refresh();
         this.animateImgOnScroll();
         this.animateTitleOnScroll()
     },
-
-    beforeDestroy(){
-        this.$ScrollTrigger.defaults();
-    }
 }
 </script>
 

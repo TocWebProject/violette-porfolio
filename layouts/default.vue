@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: Raleway;
 }
 </style>
